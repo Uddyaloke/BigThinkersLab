@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class='container' style='min-height: 100%'>
+<div class='col-sm-6 offset-sm-3'>
+	<h1 style='margin-top: 100px;'>{{ title }}</h1>
+	<hr/>
+	<form method='POST' action='' enctype='multipart/form-data'>
+		{% csrf_token %}
+		{{ form|crispy }}
+		<input type='submit' class='btn btn-primary btn-xl' value='{{ title }}' />
+	</form>
+</div>
+</div>
+
+{% endblock content %}

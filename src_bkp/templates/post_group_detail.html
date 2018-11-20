@@ -1,0 +1,226 @@
+{% extends "base.html" %}
+{% load urlify %}
+{% load crispy_forms_tags %}
+{% load hitcount_tags %}
+
+{% block head_title %}
+	{{ instance.title }} | {{ block.super }}
+{% endblock head_title %}
+
+
+<style>
+	{% block style %}
+	.blockquote {
+		padding: .5rem 1rem;
+		border-left: .25rem solid #eceeef;
+	}
+	.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+  	}
+
+	{% endblock style %}
+</style>
+
+
+
+{% block post_detail_link %}
+	<li class='breadcrumb-item active'><a href='{{ instance.get_absolute_url }}'>{{ instance.title }}</a></li>
+{% endblock post_detail_link %}
+
+{% block content %}
+
+{% get_hit_count_js_variables for instance as hitcount %}
+{% get_hit_count for instance as total_hits %}
+
+<div class='container'>
+<div class='col-sm-8'  style='margin:0 auto;'>
+	{% if instance.image %}
+	<img src='{{ instance.image.url }}' class='img-fluid'/>
+	{% endif %}
+	<h1>{{ title }} <small>{% if instance.draft %}<span style='color: red;'>Draft </span>{% endif %}{{ instance.publish }}</small></h1>
+	
+
+	{% if instance.user.get_full_name %}
+	<p><a style='background-color: #111111; color: white; border-radius: 25px;'>&nbsp;<i class="fa fa-user text-primary mb-3 sr-icons"></i> Author: {{ instance.user.get_full_name }} &nbsp;</a> <a style='background-color: #111111; color: white; border-radius: 25px;'>&nbsp;<i class="fa fa-eye text-primary mb-3 sr-icons"></i> Views: {{ instance.view_count }} &nbsp;</a>
+
+	<a class='like-btn' style='background-color: #111111; color: white; border-radius: 25px;' data-href='{{ instance.get_api_like_url }}' data-likes='{{ instance.likes.count }}' href='{{ instance.get_like_url }}'>&nbsp;<i class="fa fa-thumbs-up text-primary mb-3 sr-icons"></i> Likes: {{ instance.likes.count }} &nbsp;</a></p>
+	{% else %}
+	<p><a style='background-color: #111111; color: white; border-radius: 25px;'>&nbsp;<i class="fa fa-user text-primary mb-3 sr-icons"></i> Author: {{ instance.user }} &nbsp;</a> <a style='background-color: #111111; color: white; border-radius: 25px;'>&nbsp;<i class="fa fa-eye text-primary mb-3 sr-icons"></i> Views: {{ instance.view_count }} &nbsp;</a>
+
+	<a class='like-btn' style='background-color: #111111; color: white; border-radius: 25px;' data-href='{{ instance.get_api_like_url }}' data-likes='{{ instance.likes.count }}' href='{{ instance.get_like_url }}'>&nbsp;<i class="fa fa-thumbs-up text-primary mb-3 sr-icons"></i> Likes: {{ instance.likes.count }} &nbsp;</a></p>
+	{% endif %}
+	
+	<hr/>
+
+
+	<h4>Tutorials in this series are:</h4>
+	{% for post in relevant_posts %}
+	<a href='/posts/{{ post.slug }}'>{{ post.title }} |</a>
+	{% endfor %}<hr/>
+
+	<div class='row'>	
+	<div class="col-sm-12">
+
+		<div class='content-markdown post-detail-item'>{{ instance.content }}</div>
+		<hr/>
+		<br/>
+
+		<div>
+			<p class='lead'>Comments</p>
+			{% if request.user.is_authenticated %}
+			<form method="POST" action=".">{% csrf_token %}				
+				{{ comment_form|crispy }}
+				<input type='submit' value='Post Comment' class='btn btn-default' />
+			</form>
+			{% else %}
+			<p>You must login to comment</p>
+			{% endif %}
+			<hr/>
+			{% for comment in comments %}
+
+			<blockquote class="blockquote">
+				<p class="mb-0">{{ comment.content }}</p>
+				<footer class="blockquote-footer">via {{ comment.user }} | {{ comment.timestamp|timesince }} ago | {% if comment.children.count > 0 %}{{ comment.children.count }} Comment{% if comment.children.count > 1 %}s{% endif %} | {% endif %}<a class='comment-reply-btn' href='#'>Reply</a> | <a class='' href='{{ comment.get_absolute_url }}'>Thread</a></footer>
+
+				<div class='comment-reply' style='display: None;'>
+					{% for child_comment in comment.children %}
+						<blockquote class="blockquote">
+							<p class="mb-0">{{ child_comment.content }}</p>
+							<footer class="blockquote-footer">via {{ child_comment.user }} | {{ child_comment.timestamp|timesince }} ago</footer>
+						</blockquote>
+					{% endfor %}
+					{% if request.user.is_authenticated %}
+					<form method="POST" action=".">{% csrf_token %}				
+						{{ comment_form|crispy }}
+						<input type='hidden' name='parent_id' value='{{ comment.id }}' >
+						<input type='submit' value='Reply' class='btn btn-default'>
+					</form>
+					{% else %}
+					<p>You must login to comment</p>
+					{% endif %}
+				</div>
+
+			</blockquote>
+			<hr/>
+
+			{% endfor %}
+
+		</div>
+
+	</div>
+	</div>
+</div>
+
+<!-- SLIDER -->
+<div class='col-sm-4' style='margin:0 auto;'>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	
+
+	<!-- Wrapper for slides -->
+	<div class="carousel-inner" role="listbox">
+	    {% for p in relevant_posts %}
+	    {% if p.image %}
+	    {% if forloop.counter == 1 %}
+	    <div class="item active">
+	    {% else %}
+	    <div class="item">
+	    {% endif %}
+	        <img class='img-fluid' src="{{ p.image.url }}" alt="Image" >
+	  <div class="carousel-caption" style='top:auto; bottom: -30px;'>
+	    <h4><a href='/posts/{{ p.slug }}' style='background-color: #111111; color: white; font-size: 15px;'>{{ p.title }}</a></h4>
+	  </div>
+	    </div>
+	    <!-- Left and right controls -->
+	    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	        <span class="sr-only">Previous</span>
+	    </a>
+	    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	        <span class="sr-only">Next</span>
+	    </a>
+	    {% endif %}
+	    {% endfor %}
+	    </div>
+
+	    
+	</div><br />
+
+	</div>
+
+	<div class='col-sm-4' style='margin:0 auto;'>
+		<ul class="list-group">
+		  <li class="list-group-item list-group-item-action active d-flex justify-content-between align-items-center">
+		    Trending Courses
+
+		    <span class="glyphicon glyphicon-fire" style="color:red;" aria-hidden="true"></span>
+		  </li>
+		  {% for qs in trending_instances %}
+		  <li class="list-group-item d-flex justify-content-between align-items-center">
+		    <a href='/postgroups/{{ qs.slug }}'>{{ qs.title }}</a>
+		    <span class="badge badge-primary badge-pill">{{ qs.posts.count }}</span>
+		  </li>
+		  {% endfor %}
+		</ul>
+	</div>
+
+	<div class='col-sm-4' style='margin:0 auto;'>
+		<ul class="list-group">
+		  <li class="list-group-item list-group-item-action active d-flex justify-content-between align-items-center">
+		    Trending Articles
+		    <span class="glyphicon glyphicon-fire" style="color:red;" aria-hidden="true"></span>
+		  {% for qs in trending_post_instances %}
+		  </li>
+		  <li class="list-group-item d-flex justify-content-between align-items-center">
+		    <a href='/posts/{{ qs.slug }}'>{{ qs.title }}</a>
+		  </li>
+		  {% endfor %}
+		</ul>
+	</div>
+</div>
+<!-- END OF SLIDER -->
+
+	
+</div>
+
+{% endblock content %}
+
+{% comment %}
+If you do not wish to perform any additional JavaScript actions after POST,
+you can use this template tag to insert all the JavaScript you need, as in:
+
+{% insert_hit_count_js for postgroup %}
+
+Or you can use with 'debug' for some output:
+
+{% insert_hit_count_js for postgroup debug %}
+
+The code below is used to update the page view so we can test it with selenium.
+{% endcomment %}
+
+{% block inline_javascript %}
+
+{% load staticfiles %}
+<script src="{% static 'hitcount/jquery.postcsrf.js' %}"></script>
+
+{% get_hit_count_js_variables for instance as hitcount %}
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+  $.postCSRF("{{ hitcount.ajax_url }}", { hitcountPK : "{{ hitcount.pk }}" })
+    .done(function(data){
+      $('<i />').text(data.hit_counted).attr('id','hit-counted-value').appendTo('#hit-counted');
+      $('#hit-response').text(data.hit_message);
+  }).fail(function(data){
+      console.log('POST failed');
+      console.log(data);
+  });
+});
+</script>
+
+
+{% endblock %}
+

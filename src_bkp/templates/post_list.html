@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+
+<style>
+{% block style %}
+
+img {
+	height: 200px;
+	vertical-align: top;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-left: 0em;
+	margin-right: .5em;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	float: left;
+}
+
+
+
+.setup {
+  display:inline-block;
+  padding:0px;
+  margin:0;
+  border:0;
+  /*margin-left:-4px;*/
+}
+
+.shadow {
+	/*border: 1px solid;
+  	padding: 10px;*/
+  	box-shadow: 5px 10px #888888;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.col-sm-11 {
+	padding-left: 0px;
+}
+
+.text-primary {
+    color: #ff0023!important;
+}
+
+{% endblock style %}
+</style>
+
+{% block content %}
+
+<div class='container'>
+
+<div class='col-sm-12' style='text-align: center;'>
+	<h2>Available Articles</h2>
+</div>
+
+<div class="col-sm-9 setup" style='padding:0px; margin:0; border: 0'>
+	{% for obj in object_list %}
+	<div class="row">		
+			<div class="col-sm-11 offset-sm-1 shadow"  style="background-color: #f9f5f5;">
+
+				{% if obj.image %}			
+				<img src="{{ obj.image.url }}" />		
+				{% endif %}
+				<div class="post-detail-item">
+					{% if obj.draft %}
+					<h3 style='color: red;'>Staff Only: Draft</h3>
+					{% endif %} 
+					{% if obj.publish > today %}
+					<h3 style='color: red;'>Staff Only: Future Post</h3>
+					{% endif %}		  	
+					<h4><a href='{{ obj.get_absolute_url }}'>{{ obj.title }} <small>{{ obj.publish }}</small></a></h4>
+					{% if obj.user.get_full_name %}
+					<p><a style='background-color: #3D9970; color: white; border-radius: 25px;'>&nbsp;<i class="fa fa-user text-primary mb-3 sr-icons"></i> {{ obj.user.get_full_name }} &nbsp;</a> <a style='background-color: #3D9970; color: white; border-radius: 25px;'> &nbsp; <i class="fa fa-clock-o text-primary mb-3 sr-icons"></i> {% if obj.read_time <= 1 %} < 1 minute {% else %} {{ obj.read_time }} minutes {% endif %} </a>&nbsp;<a style='background-color: #3D9970; color: white; border-radius: 25px;'>  <i class="fa fa-eye text-primary mb-3 sr-icons"></i> {{ obj.view_count }} </a>&nbsp;
+
+					<a class='like-btn btn-light' style='background-color: #3D9970; color: white; border-radius: 25px;' data-href='{{ obj.get_api_like_url }}' data-likes='{{ obj.likes.count }}' href='{{ obj.get_like_url }}'>&nbsp;<i class="fa fa-thumbs-up text-primary mb-3 sr-icons"></i> {{ obj.likes.count }}&nbsp;</a></p>
+					{% else %}
+					<p><a style='background-color: #3D9970; color: white; border-radius: 25px;'>&nbsp;<i class="fa fa-user text-primary mb-3 sr-icons"></i> {{ obj.user }} &nbsp;</a> <a style='background-color: #3D9970; color: white; border-radius: 25px;'> &nbsp; <i class="fa fa-clock-o text-primary mb-3 sr-icons"></i> {% if obj.read_time <= 1 %} < 1 minute {% else %} {{ obj.read_time }} minutes {% endif %} </a>&nbsp;<a style='background-color: #3D9970; color: white; border-radius: 25px;'> <i class="fa fa-eye text-primary mb-3 sr-icons"></i> {{ obj.view_count }} </a>&nbsp;
+
+					<a class='like-btn btn-light' style='background-color: #3D9970; color: white; border-radius: 25px;' data-href='{{ obj.get_api_like_url }}' data-likes='{{ obj.likes.count }}' href='{{ obj.get_like_url }}'>&nbsp;<i class="fa fa-thumbs-up text-primary mb-3 sr-icons"></i> {{ obj.likes.count }}&nbsp;</a></p>
+					{% endif %}
+					<p><i class="fa fa-tags text-primary mb-3 sr-icons"></i>&nbsp; {% for tag in obj.tags.all %} <a href='/posts/tags/{{ tag.slug }}' style='background-color: black; color: white; border-radius: 25px;'> &nbsp;{{ tag }}&nbsp;</a> &nbsp;{% endfor %} </p>
+					<a href="{{ obj.get_absolute_url }}" class="btn btn-primary" role="button">View</a>
+				</div>
+			</div>
+	</div><br/>
+	{% endfor %}
+</div>
+
+<div class='col-sm-3'>
+	<div class='col-sm-12' style='margin:0 auto;'>
+		<ul class="list-group">
+		  <li class="list-group-item list-group-item-action active d-flex justify-content-between align-items-center">
+		    Trending Courses
+		    <span class="glyphicon glyphicon-fire" style="color:red;" aria-hidden="true"></span>
+		  </li>
+		  {% for qs in trending_instances %}
+		  <li class="list-group-item d-flex justify-content-between align-items-center">
+		    <a href='/postgroups/{{ qs.slug }}'>{{ qs.title }}</a>
+		    <span class="badge badge-primary badge-pill">{{ qs.posts.count }}</span>
+		  </li>
+		  {% endfor %}
+		</ul>
+	</div>
+
+	<div class='col-sm-12' style='margin:0 auto;'>
+		<ul class="list-group">
+		  <li class="list-group-item list-group-item-action active d-flex justify-content-between align-items-center">
+		    Trending Articles
+		    <span class="glyphicon glyphicon-fire" style="color:red;" aria-hidden="true"></span>
+		  </li>
+		  {% for qs in trending_post_instances %}		  
+		  <li class="list-group-item d-flex justify-content-between align-items-center">
+		    <a href='/posts/{{ qs.slug }}'>{{ qs.title }}</a>
+		  </li>
+		  {% endfor %}
+		</ul>
+	</div>
+</div>
+
+
+<div class='col-sm-6 offset-sm-5'>
+	<div class="pagination">
+	    <span class="step-links">
+	        {% if object_list.has_previous %}
+	            <a href="?{{ page_request_var }}=1{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">&laquo; first</a>
+	            <a href="?{{ page_request_var }}={{ object_list.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">previous</a>
+	        {% endif %}
+
+	        <span class="current">
+	            Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+	        </span>
+
+	        {% if object_list.has_next %}
+	            <a href="?{{ page_request_var }}={{ object_list.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">next</a>
+	            <a href="?{{ page_request_var }}={{ object_list.paginator.num_pages }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">last &raquo;</a>
+	        {% endif %}
+	    </span>
+	</div>
+</div>
+
+</div>
+{% endblock content %}

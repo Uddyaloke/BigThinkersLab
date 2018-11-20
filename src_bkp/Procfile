@@ -1,0 +1,1 @@
+web: gunicorn trydjango2.wsgi --log-file -

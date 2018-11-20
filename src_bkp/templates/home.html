@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block content %}
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2 class="text-uppercase">
+              <strong>Coder's Delight..</strong>
+            </h2>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <div style="padding: 1rem; border-radius: 25px; padding-bottom: 0.05rem; background-image: linear-gradient(#777777a2, #777777a3);">
+              <h4 class="text-faded mb-5" style="text-align: justify; color: white;">Coder's Delight is a tutorial blog site with course materials on Big Data technologies. Here we aim to take you step-by-step to learn and build modern fully open-source Big Data applications using Scala, Sqoop, Hive, Apache Spark, Flume etc..Happy Learning!!</h4>
+            </div>
+            <div style="margin: 4rem;">
+              <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>&nbsp &nbsp &nbsp &nbsp
+              <a class="btn btn-primary btn-xl" href="#" id="addClass"><span class="glyphicon glyphicon-comment"></span> Open in chat </a>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup-box chat-popup" id="qnimate">
+          <div class="popup-head">
+            <div class="popup-head-left pull-left">Pandora</div>
+              <div class="popup-head-right pull-right">
+                <button data-widget="remove" id="removeClass" class="chat-header-button pull-right" type="button"><i class="glyphicon glyphicon-off"></i></button>
+              </div>
+            </div>
+
+          <div class="popup-messages">
+        
+      
+      
+      
+          <div class="direct-chat-messages">
+                        
+              
+              <div class="chat-box-single-line">
+                    <abbr class="timestamp"><span id="time"></span></abbr>
+              </div>
+              
+              
+              <!-- Message. Default to the left -->
+              <div class="direct-chat-msg doted-border">
+                <div class="direct-chat-info clearfix">
+                  <span class="direct-chat-name pull-left">User</span>
+                </div>
+                <!-- /.direct-chat-info -->
+                <img alt="message user image" src="{% static 'images/user.png' %}" class="direct-chat-img"><!-- /.direct-chat-img -->
+                <div class="direct-chat-text">
+                  <span class="info">
+                    <span contenteditable="true" id="user" class="info alert-custom" data-placeholder="Hello" data-focused-advice="Hello"></span>
+                  </span>
+                </div>
+                <br/>
+
+                <div class="direct-chat-info clearfix">
+                  <span class="direct-chat-img-reply-small pull-left">
+                  </span>
+                  <span class="direct-chat-reply-name pull-left">Pandora</span>
+                </div>
+                <img alt="message user image" src="{% static 'images/chatbot.png' %}" class="direct-chat-img" style='background-color: white'>
+                <!-- /.direct-chat-text -->
+                <div class="direct-chat-text">
+                  <span class="info">
+                    <span contenteditable="true" id="chatbot" class="info alert-custom" data-placeholder="Hello..I am Pandora..a chatbot..Please type your message in the textarea below..and I would try to help to the best of my knowledge.." data-focused-advice="Hello..I am Pandora..a chatbot..Please type your message in the textarea below..and I would try to help to the best of my knowledge.."></span>
+                  </span>
+                </div>
+              </div>
+                        <!-- /.direct-chat-msg -->    
+              
+          </div>
+          </div>
+          <div class="popup-messages-footer">
+            <textarea id="status_message" type="text" placeholder="Type a message..." rows="10" cols="40" name="message" style="color: black;"></textarea>
+            <button id="button" class="bg_none" onclick="toggleStartStop();" ><i class="fa fa-microphone"></i> </button>
+          
+          </div>
+    </div>
+
+
+      </header>
+{% endblock content %}
+
+{% block inline_javascript %}
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#addClass").click(function () {
+                $('#qnimate').addClass('popup-box-on');
+                var today = new Date();
+                document.getElementById('time').innerHTML=today.toDateString();
+                });
+
+                $("#removeClass").click(function () {
+                $('#qnimate').removeClass('popup-box-on');
+                  });
+        })
+  </script>
+
+  <script type="text/javascript">
+    var trigger = [
+      ["hi","hey","hello"],
+      ["how are you","how is life","how are things","what's up"],
+      ["what are you doing","what is going on"],
+      ["how old are you"],
+      ["who are you","are you human","are you bot","are you human or bot"],
+      ["who created you","who made you"],
+      ["your name please","your name","may i know your name","what is your name"],
+      ["i love you"],
+      ["happy","good"],
+      ["bad","bored","tired"],
+      ["help me","tell me story","tell me joke"],
+      ["ah","yes","ok","okay","nice","thanks","thank you"],
+      ["bye","good bye","goodbye","see you later"],
+      ["what is this site about","tell me about this site","what about this site"],
+      ["where are scala course materials","give me the link to scala course materials"],
+      ["please tell me about hadoop certification","please tell me about spark certicifation ","give me details on hadoop certification","give me details on spark certification","what are the certifications available on hadoop and spark","what are the certifications available on hadoop","what are the certifications available on spark","please tell me about spark certicifation","hadoop certification","spark certification","hadoop and spark certification","hadoop certifications","spark certifications","what is cca175","what is cca175 certification"],
+      ["how to register for cca175 certification","how to register for cca175","How to register for cloudera hadoop and spark developer certification","How to register for hadoop and spark developer certification","please tell me the registration process for cca175 certification","please tell me the registration process for cca175","please tell me the registration process for hadoop and spark developer certification","registration process for cca175 certification","registration process for cca175","registration process for cloudera hadoop and spark developer certification","registration process for hadoop and spark developer certification","tell me about registration process for cca175 certification","tell me about registration process for cca175","registration process for cloudera hadoop and spark developer certification","registration process for hadoop and spark developer certification","what is the registration process for cca175 certification","what is the registration process for cca175","what is the registration process for hadoop and spark developer certification","what is the registration process for cloudera hadoop and spark developer certification","how do i register for cca175 certification","how do i register for cca175","how do i register for cloudera hadoop and spark developer certification","how do i register for hadoop and spark developer certification"],
+      ["tell me about the test format","tell me about cca175 test format","tell me about the test format of cloudera hadoop and spark developer certicifation","test format for cca175 certification","test format for hadoop and spark developer certification","cca175 test format","cloudera hadoop and spark test format"],
+      ["what are the topics covered in cca175 certification","what are the topics covered in cca175","cca175 certification syllabus","cca175  syllabus","what are the topics covered in cloudera hadoop and spark developer certification","what are the topics covered in hadoop and spark developer certification","cloudera hadoop and spark developer certification syllabus","hadoop and spark developer certification syllabus","topics covered in cloudera hadoop and spark developer certification","topics covered in hadoop and spark developer certification","topics covered in cca175 certification","cca175 certification topics","topics covered in cca175","cca175 topics","cloudera hadoop and spark developer certification topics","hadoop and spark developer certification topics"],
+      ["how do i prepare for cca175 certification","how do i prepare for cca175","how to prepare for cca175 certification","how to prepare for cca175","preparation strategy for cca175","preparation strategy for cca175 certification","cca175 preparation strategy","how do i prepare for hadoop and spark developer certification","how to prepare for hadoop and spark developer certification","preparation strategy for hadoop and spark developer certification","hadoop and spark developer certification preparation strategy"],
+      ["what is the cost of cca175 certification","cost of cca175 certification","what is the cost of cloudera hadoop and spark developer certification","cost of cloudera hadoop and spark developer certification","what is the cost of hadoop and spark developer certification","cost of hadoop and spark developer certification"]
+    ];
+
+    var reply = [
+      ["Hello, I am Pandora, a chatbot. Please type or speak your message, in the textarea below, and I would try to help, to the best of my knowledge.","Hi, I am Pandora. Please type or speak your message, in the textarea below, and I would try to help, to the best of my knowledge..","Hey, How are you?. I am Pandora. Please type or speak your message, in the textarea below, and I would try to help, to the best of my knowledge.."],
+      ["Fine","Pretty well","Fantastic"],
+      ["Nothing much, just munching on bytes!","About to go to sleep","Can you guess?","I don't know actually"],
+      ["I am only 1 day old as I don't age"],
+      ["I am just a bot","I am a bot. What are you"],
+      ["Uddyaloke Sarkar","My God"],
+      ["Pandora"],
+      ["I love you too","Me too"],
+      ["Have you ever felt bad?","Glad to hear it"],
+      ["Why?","Why? You shouldn't!","Try watching TV"],
+      ["I will","What about?"],
+      ["Tell me a story","Tell me a joke","Tell me about yourself","You are welcome"],
+      ["Bye","Goodbye","See you later"],
+      ["This site, hosts course materials, and articles on Hadoop and Spark. Please navigate to offerings section, and browse through the  articles, for better understanding. Courses are divided in various articles, grouped together. Individual articles as well as courses, can be accessed from the Offerings menu."],
+      ["Please navigate to Offerings menu, for Scala course."],
+      ["CCA175, Cloudera Hadoop and Spark developer certification, is one of the most popular and revered certifications available, as of today. This certification, is provided by Cloudera Inc. It tests knowledge, on Big Data technologies like Spark, Sqoop, Hive, HDFS, Flume etc. No prerequisites are essential for this exam. It hosts all scenario based questions, which are to be solved using aforesaid technologies, in CDH 5 cluster. This certification is valid for 2 years from the date of completion. Other certification offerings from cloudera are  CCA Data Analyst, CCA Administrator, CCP Data Engineer. Equivalent Spark certifications from other distributors, are Databricks certified Spark Developer, MapR certified Spark Developer, Hortonworks certified Spark Developer."],
+      ["Registration for CCA175, Cloudera Hadoop and Spark developer certification, can be accomplished by follwing the link https://university.cloudera.com/content/cca175. Exam can be written within one year from the date of registration. Exam is proctored and so can be written from any place. But they may have some rules, like there cannot be any paper lying around, from where you take the exam, etc. The rules would be made clear by the proctor before the exam commence. Also there are some compatibility requirements, for the system (Desktop/Laptop etc), from which you plan to take the exam. So prior to the exam, please check system compatibility using the following link, https://www.examslocal.com/ScheduleExam/Home/CompatibilityCheck. One must wait for atleast 30 days after a failed attempt, to reschedule exam."],
+      ["CCA175 certification exam, consists of 8 to 12 performance based (hands-on) tasks, to be solved in CDH 5 cluster. Time limit for this exam is 120 minutes. Pass score is 70%. One can choose Scala or Python as coding language, for this exam. It is not required to know both Scala and Python. Knowing any one of them is good enough. In the exam the final output will be asked to be saved in a particular location, or in any table. Only this final output file data, or target table data would be evaluated. Code to generate the final output will not be evaluated, or asked to be saved anywhere. Only official reference documentation associated with various technologies like Sqoop, Spark, Flume, Hive etc can be accessed during the exam. For full list of documentation, please visit http://www.cloudera.com/more/training/certification/cca-spark.html. Current certification technology stack (only key technologies are listed) are, Spark 1.6, Apache Hive 1.1.0, Flume 1.6.0, Apache Hadoop 2.6.0"],
+      ["Data Ingestion, Transform Stage Store and Data Analysis are mostly the topics covered in CCA175 certification exam currently.  Data Ingestion includes 1. import/export and other scenarios using Sqoop and Mysql. 2. Moving Data in and out of HDFS using Hadoop fs commands. Transform, Stage and Store includes 1. load data from HDFS and store results back to HDFS using Spark. 2. Perform transformations and actions like join, filter, aggregation, sort, etc using Spark. 3. Dealing with various data structures like Parquet, Json, Avro, Orc, etc and compression techniques like gzip, snappy, etc. While Data Analysis includes 1. Metastore (Hive Tables) creation and analysis. 2. Evolving an Avro schema and creating metastore table based on Avro Schema. 3. Using Spark SQL or Data Frames to achieve business scenario."],
+      ["A working environment i.e., a practice environment is critical for CCA175 preparation. You can use your personal machine, and try one of the following: Cloudera Quick Start VM, Horton Works VM, Paid third party lab providers like Itversity, Cloudxlab, etc. Please make sure, you download the appropriate VM version, used during certification exam in your machine. Daily 2 hours hands-on practice, for 30 to 45 days is essential to pass the certification exam. Topics to cover during this preparation time are HDFS, Sqoop, Python/Scala, Core Spark(RDD), Spark Data Frame, Spark SQL, Flume, Spark Streaming, Hive, Impala. Following are some useful learning resources apart from this site. 1. http://arun-teaches-you-tech.blogspot.com. 2. http://Itversity.com. 3. https://www.youtube.com/watch?v=2-d8WwdtlUI&list=PLf0swTFhTI8rDQXfH8afWtGgpOTnhebDx. 4. Paid courses in Udemy with title as CCA175"],
+      ["Please check the link https://university.cloudera.com/content/cca175 to know the cost of Cloudera Spark and Hadoop Developer Certification (CCA175)"]
+    ];
+
+    var alternative = ["Haha...", "Eh..."];
+
+    document.querySelector("#status_message").addEventListener("keypress", function(e){
+      var key = e.which || e.keyCode;
+      if (key === 13){  //Enter button
+        event.preventDefault();
+        var status_message = document.getElementById("status_message").value;
+        document.getElementById("user").innerHTML = status_message;
+        output(status_message);
+      }
+    });
+
+    function output(status_message){
+      try{
+        var product = status_message + " = " + eval(status_message);
+      } catch(e){
+        var text = (status_message.toLowerCase()).replace(/[^\w\s\d]/gi, ""); //remove all chars except words, space and numbers
+        text = text.replace(/ a /g, " ").replace(/i feel /g,"").replace(/i am feeling /g,"").replace(/whats/g, "what is").replace(/please /g, "").replace(/ please/g, "").replace(/spark and hadoop/g,"hadoop and spark").replace(/cloudera cca175/g,"cca175").replace(/cca 175/g,"cca175").replace(/exam format/g,"test format").replace(/exam specification/g,"test format").replace(/test specification/g,"test format").replace(/certification exam/g,"certification").replace(/cloudera hadoop and spark developer cca175/g,"cca175").replace(/cloudera spark and hadoop developer cca175/g,"cca175").replace(/cca175 cloudera hadoop and spark developer/g,"cca175").replace(/cca175 cloudera spark and hadoop developer/g,"cca175").replace(/spark and hadoop developer certificate/g,"hadoop and spark developer certification").replace(/development/g,"developer").replace(/cca175 developer/g,"cca175").replace(/cca175 developement/g,"cca175").replace(/exam/g,"certification").replace(/hadoop and spark certification/g,"hadoop and spark developer certification").replace(/spark and hadoop certification/g,"hadoop and spark developer certification").replace(/certificate/g,"certification");
+        if(compare(trigger, reply, text)){
+          var product = compare(trigger, reply, text);
+        } else {
+          var product = alternative[Math.floor(Math.random()*alternative.length)] + "<span id='emoji'>" + "&#x1F615" + "</span>";
+        }
+      }
+      document.getElementById("chatbot").innerHTML = product;
+      speak(product);
+      document.getElementById("status_message").value = ""; //clear input 
+     }
+
+     function compare(arr, array, string){
+      var item;
+      for(var x=0; x<arr.length; x++){
+        for(var y=0; y<array.length; y++){
+          if(arr[x][y] == string){
+            items = array[x];
+            item = items[Math.floor(Math.random()*items.length)];
+          }
+        }
+      }
+      return item;
+     }
+
+     function speak(string){
+      var utterance = new SpeechSynthesisUtterance();
+      utterance.voice = speechSynthesis.getVoices().filter(function(voice){return voice.name == "Agnes";})[0];
+      utterance.text = string;
+      utterance.lang = "en-IN";
+      utterance.volume = 1; //0-1 interval
+      utterance.rate = 1;
+      utterance.pitch = 2; //0-2 interval
+      speechSynthesis.speak(utterance);
+     }
+
+  </script>
+
+  <script type="text/javascript">
+
+    var r = document.getElementById("status_message");
+
+    if("webkitSpeechRecognition" in window){
+      var recognizing;
+      var recognition = new webkitSpeechRecognition();
+      recognition.continuous = true;
+      recognition.lang = "en-IN";
+      reset();
+      recognition.onend = reset();
+
+      recognition.onresult = function (event) {
+        for (var i = event.resultIndex; i < event.results.length; ++i) {
+          if (event.results[i].isFinal) {
+            status_message.value += event.results[i][0].transcript;
+          }
+        }
+      }
+    } else {
+          r.innerHTML = "Your browser is not supported. If Google Crome, please upgrade!."
+      }
+
+    function reset() {
+      recognizing = false;
+      button.innerHTML = "<i class='fa fa-microphone fa-2x' aria-hidden='true'></i></i><br>";
+    }
+
+    function toggleStartStop() {
+      if (recognizing) {
+        recognition.stop();
+        reset();
+      } else {
+        recognition.start();
+        recognizing = true;
+        button.innerHTML = "<i class='fa fa-microphone-slash fa-2x' aria-hidden='true'></i><br>";
+      }
+    }
+  </script>
+
+{% endblock %}
+

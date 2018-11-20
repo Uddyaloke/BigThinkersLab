@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block head_extra %}
+{{ form.media }}
+
+{% endblock head_extra %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<style>
+	{% block style %}
+	.wmd-panel{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+	}
+
+	{% endblock style %}
+</style>
+
+<div class='container'>
+<div class='row'>
+<div class='col-sm-6'>
+	<h1>Preview</h1>
+	<hr/>
+	<div class='content-preview'>
+		<h3 id='preview-title'></h3>
+		<h5 id='preview-teaser'></h5>
+		<p id='preview-content'></p>
+	</div>
+</div>
+<!-- <div class='col-sm-6 col-sm-offset-3' style='margin: 0 auto;'> -->
+<div class='col-sm-6'>
+<h1>Form</h1>
+<hr/>
+<form method='POST' action='' enctype='multipart/form-data'>
+	{% csrf_token %}
+<!-- 	<h1>Form</h1> -->
+	{{ form|crispy }}
+	<input type='submit' class='btn btn-default' value='Create Post' />
+</form>
+</div>
+</div>
+</div>
+{% endblock content %}
