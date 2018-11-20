@@ -1,0 +1,902 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"ten",
+				"technology"
+			],
+			[
+				"docum",
+				"documentation"
+			],
+			[
+				"certi",
+				"certification"
+			],
+			[
+				"in",
+				"innerHTML"
+			],
+			[
+				"fi",
+				"finalTranscripts"
+			],
+			[
+				"sp",
+				"speechRecognizer"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"text",
+				"textarea"
+			],
+			[
+				"sta",
+				"status_message"
+			],
+			[
+				"st",
+				"status_message"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"chat",
+				"chatbot"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"to",
+				"margin-top"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"mi",
+				"min-height"
+			],
+			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"data-",
+				"data-likes"
+			],
+			[
+				"btn",
+				"btn-default"
+			],
+			[
+				"h",
+				"h4\tTag"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"font-st",
+				"font-style"
+			],
+			[
+				"txt",
+				"text-align"
+			],
+			[
+				"p",
+				"padding-left"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"m",
+				"margin-top"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"post",
+				"postgroups"
+			],
+			[
+				"Postgr",
+				"Postgroup"
+			],
+			[
+				"Post",
+				"Postgroup"
+			],
+			[
+				"Po",
+				"Postgroup"
+			],
+			[
+				"s",
+				"serializers"
+			],
+			[
+				"H",
+				"HTTP_400_BAD_REQUEST"
+			],
+			[
+				"seria",
+				"serializer"
+			],
+			[
+				"A",
+				"AllowAny"
+			],
+			[
+				"C",
+				"CharField"
+			],
+			[
+				"d",
+				"django"
+			],
+			[
+				"u",
+				"user_object"
+			],
+			[
+				"va",
+				"validated_data"
+			],
+			[
+				"parent_",
+				"parent_obj"
+			],
+			[
+				"model",
+				"model_type"
+			],
+			[
+				"c",
+				"children"
+			],
+			[
+				"Serializer",
+				"SerializerMethodField"
+			],
+			[
+				"L",
+				"LimitOffsetPagination"
+			],
+			[
+				"re",
+				"rest_framework"
+			],
+			[
+				"f",
+				"forms"
+			],
+			[
+				"cle",
+				"cleaned_data"
+			],
+			[
+				"U",
+				"UserLoginForm"
+			],
+			[
+				"ini",
+				"initial_data"
+			],
+			[
+				"pare",
+				"parent_qs"
+			],
+			[
+				"parent",
+				"parent_id"
+			],
+			[
+				"content",
+				"content_data"
+			],
+			[
+				"obje",
+				"object_id"
+			],
+			[
+				"__",
+				"__class__"
+			],
+			[
+				"ob",
+				"object_id"
+			],
+			[
+				"Comment",
+				"CommentManager"
+			],
+			[
+				"P",
+				"PagedownWidget"
+			],
+			[
+				"marked",
+				"markedContent"
+			],
+			[
+				"n",
+				"now"
+			],
+			[
+				"ti",
+				"timezone"
+			],
+			[
+				"o",
+				"objects"
+			],
+			[
+				"is",
+				"is_superuser"
+			],
+			[
+				"is_",
+				"is_staff"
+			],
+			[
+				"pre",
+				"pre_save_post_receiver"
+			],
+			[
+				"po",
+				"post_delete"
+			],
+			[
+				"post_",
+				"post_detail"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"by",
+				"bypassSecurityTrustResourceUrl\tmethod"
+			],
+			[
+				"Ac",
+				"ActivatedRoute\talias"
+			],
+			[
+				"for",
+				"forRoot\tmethod"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/trydjango2/settings/local.py",
+			"settings":
+			{
+				"buffer_size": 5335,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/trydjango2/settings/base.py",
+			"settings":
+			{
+				"buffer_size": 5306,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/trydjango2/settings/production.py",
+			"settings":
+			{
+				"buffer_size": 5575,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/posts/views.py",
+			"settings":
+			{
+				"buffer_size": 9278,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 137.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Uddyaloke/dev/BigThinkersLab",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src"
+	],
+	"file_history":
+	[
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/templates/post_detail.html",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/templates/post_group_detail.html",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/trydjango2/settings/production.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/Procfile",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/runtime.txt",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/trydjango2/settings/local.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/trydjango2/settings/base.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/trydjango2/Procfile",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/.gitignore",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/trydjango2/wsgi.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/trydjango2/settings/__init__.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/static/css/base.css",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/static/assets/css/main.css",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/templates/home.html",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/templates/base.html",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/templates/base_bkp.html",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/templates/form.html",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/templates/post_list.html",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/templates/post_group_list.html",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/accounts/views.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/posts/views.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/accounts/api/views.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/templates/post_group_form.html",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/postgroups/views.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/postgroups/urls.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/postgroups/models.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/posts/models.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/posts/urls.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/posts/api/urls.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/templates/post_form.html",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/trydjango2/urls.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/post_list_bkp.html",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/trydjango2/settings.py",
+		"/C/Users/Uddyaloke/Desktop/Big Data Practice/Important_Commands",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/posts/utils.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/posts/tests.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/postgroups/forms.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/posts/forms.py",
+		"/C/Users/Uddyaloke/dev/BigThinkersLab/src/posts/admin.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/postgroups/models.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/post_group_detail.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/post_detail.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/base.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/post_group_list.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/post_list.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/posts/models.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/posts/urls.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/postgroups/urls.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/postgroups/views.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/posts/views.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/base_bkp_2.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/home.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/post_group_form.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/post_form.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/confirm_delete.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/comment_thread.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/form.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/home_bkp_1.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/postgroups/base.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/post_detail_bkp.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/base_bkp_1.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/home_bkp.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/post_group_list_bkp.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/accounts/views.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/accounts/forms.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/static/css/base.css",
+		"/C/Users/Uddyaloke/Downloads/startbootstrap-creative-gh-pages/startbootstrap-creative-gh-pages/css/creative.css",
+		"/C/Users/Uddyaloke/Downloads/startbootstrap-creative-gh-pages/startbootstrap-creative-gh-pages/index.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/static/js/creative.js",
+		"/C/Users/Uddyaloke/dev/ngSrvupTest/client/src/app/app.component.html",
+		"/C/Users/Uddyaloke/dev/ngSrvupTest/client/src/app/home/home.component.html",
+		"/C/Users/Uddyaloke/dev/ngSrvupTest/client/src/app/video-list/video-list.component.html",
+		"/C/Users/Uddyaloke/Downloads/startbootstrap-creative-gh-pages/startbootstrap-creative-gh-pages/js/creative.js",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/static/vendor/jquery/jquery.js",
+		"/C/Users/Uddyaloke/Downloads/startbootstrap-creative-gh-pages/startbootstrap-creative-gh-pages/css/creative.min.css",
+		"/C/Users/Uddyaloke/Downloads/startbootstrap-creative-gh-pages/startbootstrap-creative-gh-pages/package.json",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/postgroups/admin.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/posts/admin.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/postgroups/forms.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/posts/forms.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/hitcount/managers.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/hitcount/views.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/posts/views_bkp.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/trydjango2/urls.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/home/views.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/trydjango2/settings.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/Lib/site-packages/templatetag_sugar/parser.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/postgroups/postgroup_detail.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/hitcount/templatetags/hitcount_tags.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/postgroups/index.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/hitcount/models.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/postgroups/postgroup_ajax.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/hitcount/urls.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/hitcount/__init__.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/postgroups/post_detail.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/postgroups/post_ajax.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/postgroups/fixtures/initial_data.json",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/hitcount/admin.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/hitcount/management/commands/__init__.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/hitcount/management/__init__.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/static/vendor/bootstrap-theme.min.css",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/templates/base_bkp.html",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/static/assets/css/main.css",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/postgroups/apps.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/postGroups/admin.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/postGroups/models.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/posts/apps.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/postGroups/apps.py",
+		"/C/Users/Uddyaloke/dev/KolBigDataLab/src/posts/models_bkp.py",
+		"/C/Users/Uddyaloke/Free Single Page Templates/html5up-dimension/index.html",
+		"/C/Users/Uddyaloke/Free Single Page Templates/html5up-dimension/assets/sass/base/_page.scss",
+		"/C/Users/Uddyaloke/Free Single Page Templates/html5up-dimension/assets/sass/libs/_vendor.scss",
+		"/C/Users/Uddyaloke/Free Single Page Templates/html5up-dimension/assets/sass/libs/_vars.scss",
+		"/C/Users/Uddyaloke/Free Single Page Templates/html5up-dimension/assets/sass/libs/_mixins.scss",
+		"/C/Users/Uddyaloke/Free Single Page Templates/html5up-dimension/assets/sass/libs/_functions.scss",
+		"/C/Users/Uddyaloke/Free Single Page Templates/html5up-dimension/assets/sass/libs/_breakpoints.scss",
+		"/C/Users/Uddyaloke/Free Single Page Templates/html5up-dimension/assets/sass/noscript.scss",
+		"/C/Users/Uddyaloke/Free Single Page Templates/html5up-dimension/assets/sass/main.scss",
+		"/C/Users/Uddyaloke/dev/trydjango2/src/templates/messages_display.html",
+		"/C/Users/Uddyaloke/dev/trydjango2/src/templates/form.html",
+		"/C/Users/Uddyaloke/dev/trydjango2/src/templates/base.html",
+		"/C/Users/Uddyaloke/dev/trydjango2/src/posts/api/urls.py",
+		"/C/Users/Uddyaloke/dev/trydjango2/src/trydjango2/urls.py",
+		"/C/Users/Uddyaloke/dev/trydjango2/src/templates/post_list.html",
+		"/C/Users/Uddyaloke/dev/trydjango2/src/accounts/api/urls.py",
+		"/C/Users/Uddyaloke/dev/trydjango2/src/accounts/api/views.py",
+		"/C/Users/Uddyaloke/dev/trydjango2/src/posts/api/views.py",
+		"/C/Users/Uddyaloke/dev/trydjango2/src/comments/api/views.py"
+	],
+	"find":
+	{
+		"height": 45.0
+	},
+	"find_in_files":
+	{
+		"height": 116.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"taggit_templatetags",
+			"'taggit_templatetags.templatetags.taggit_extras'",
+			"mb-4",
+			"text-faded",
+			"text-faded mb-4",
+			"text",
+			"p ",
+			"text-faded mb-4",
+			"line-h",
+			"how do i register for cloudera hadoop and spark developer certification",
+			"font",
+			"fa ",
+			"focus",
+			"font",
+			"texta",
+			"static",
+			"img",
+			"text",
+			"css",
+			"#001f3f",
+			"like-btn",
+			"#0074D9",
+			"#AAAAAA",
+			"AAAAAA; color: black",
+			"color: black",
+			"#AAAAAA",
+			"#7FDBFF",
+			"#3D9970",
+			"tag",
+			"teaser",
+			"slug",
+			"taggit",
+			"tags",
+			"title",
+			"content",
+			"services",
+			"about",
+			"data-href",
+			"is_authenticated",
+			"get_absolute_url",
+			"about",
+			"big thinker's lab",
+			"Kolkata Big Data Lab",
+			"tren",
+			"header",
+			"content",
+			"tuto",
+			"admin",
+			"easi",
+			"about",
+			"_bkp",
+			"vendor",
+			"font",
+			"vendor",
+			"btn",
+			"mast",
+			"about",
+			"login",
+			"postgroup",
+			"read",
+			"hit_count_generic_relation",
+			"HitCountDetailView",
+			"total",
+			"object",
+			"post_view",
+			"post.",
+			"obj_variable",
+			"detail.html",
+			"read",
+			"get_read_time",
+			"template",
+			"obj_variable",
+			"get_hit_count_js_variables",
+			"ajax",
+			"blog.post",
+			".awesome",
+			".png",
+			"overlay",
+			"postGroup",
+			"bg.",
+			"overlay",
+			"ovelay",
+			"font-weight",
+			"overlay",
+			"bg.j",
+			"image",
+			"bg.",
+			"overlay",
+			"image/",
+			"preload",
+			"image/",
+			"image",
+			"intro",
+			"overlay",
+			"#001f3f",
+			"#ffffff",
+			"overlay",
+			"#7FDBFF",
+			"#ffffff",
+			"text-color",
+			"color",
+			"overlay",
+			"ov",
+			"moz",
+			"focus",
+			"/images",
+			"/assets",
+			"main.css",
+			"offset",
+			"wmd",
+			"res",
+			"responsive",
+			"urlify",
+			"id",
+			"uddyalokesarkar_replica",
+			"aggregateByKey",
+			"saveAsTe",
+			"classOf"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"#111111",
+			"#3D9970",
+			"#0074D9",
+			"AAAAAA; color: white",
+			"color: white",
+			"#111111",
+			"#AAAAAA",
+			"#7FDBFF",
+			"Big Thinker's Laboratory",
+			"postgroups.Postgroup",
+			"#ffffff",
+			"#001f3f",
+			"#ffffff",
+			"#7FDBFF",
+			"uddyalokesarkar_products_replica"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/trydjango2/settings/local.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5335,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4289,
+								4289
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 399.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/trydjango2/settings/base.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5306,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1524,
+								1524
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1011.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/trydjango2/settings/production.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5575,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								828,
+								832
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 305.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/posts/views.py",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 9278,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3047,
+								2994
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2115.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 47.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "bigThinkersLab.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 291.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
